@@ -5,15 +5,16 @@ class CashRegister
    @items  = [ ]
    
    def initialize(discount = 0)
+
      @total = 0
      @discount = discount
    end
   
    
    def add_item(product, price, count=1)
+     @items << product
      price = price * count
      @total += price
-    # @items << product
    end
    
    def apply_discount
