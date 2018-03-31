@@ -5,7 +5,9 @@ class CashRegister
      @total = 0
    end
    
-   def cash_register_with_discount(discount)
+   def self.cash_register_with_discount(discount)
+     total = 0
+     
    end
    
    def add_item(product, price, count)
