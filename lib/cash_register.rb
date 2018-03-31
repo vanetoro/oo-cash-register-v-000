@@ -1,6 +1,6 @@
 require 'pry'
 class CashRegister
-   attr_accessor :total, :discount, :items
+   attr_accessor :total, :discount, :items, :last_transaction
    
    
    
@@ -18,6 +18,7 @@ class CashRegister
         i+=1
       end
      price = price * count
+     @last_transaction =  price
      @total += price
    end
    
@@ -36,5 +37,6 @@ class CashRegister
    end
    
    def void_last_transaction
-  
+      @total - @last_transaction
+    end
 end 
