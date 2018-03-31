@@ -11,7 +11,7 @@ class CashRegister
   
    
    def add_item(product, price, count=1)
-      ITEMS << product
+      self.ITEMS << product
      price = price * count
      @total += price
      
