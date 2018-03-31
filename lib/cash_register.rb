@@ -12,7 +12,7 @@ class CashRegister
   
    
    def add_item(product, price, count=1)
-     i = 0
+      i = 0
       while i < count
         @items << product
         i+=1
